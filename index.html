@@ -170,11 +170,19 @@
   .overview-container {
     background: url(./images/earth_lights_lrg.jpg);
     background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: top; 
+    background-color: rgba(0,0,0,0.9);
 
     color: #FFFFFF;
     text-align: center;
-    font-size: 150%;
-    line-height: 240%;
+    line-height: 150%;
+    text-transform: uppercase;
+    margin: 0 0 10px;
+    font-weight: 100;
+    font-size: 30px;
+    background-color: rgba(0,0,0,0.9);
 
     padding-top: 125px;
     padding-right: 80px;
@@ -186,6 +194,9 @@
   .experience-container {
     background: url(./images/london-bigben.jpg);
     background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
 
     color: #222;
 
@@ -198,14 +209,19 @@
   .experience-container h2 {
     color: #FFFFFF;
     text-shadow: 1px 1px 1px #000;
+    text-transform: uppercase;
   }
 
 
   .publications-container {
     background: url(./images/background-lion.jpg);
     background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: top; 
 
-    color: #FFFFFF;
+
+    color: #999;
     text-align: right;
     font-size: 100%;
     line-height: 240%;
@@ -216,12 +232,22 @@
     padding-left: 80px;
   }
 
+  .publications-container h2 {
+    color: #999;
+    text-transform: uppercase;
+  }
+
+
 
   .contact-container {
-    background: url(./images/city-of-london.jpg);
+    background: url(./images/london-eye.jpg);
     background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
 
     color: #FFFFFF;
+    text-shadow: 1px 1px 1px #000;
     text-align: left;
     font-size: 150%;
     line-height: 140%;
@@ -233,11 +259,22 @@
   }
 
 
+  #Contact a {
+    color: white;
+    text-shadow: 1px 1px 1px #000;
+  }
+
+
   .ui-accordion-content, .ui-accordion-content p {
     background-color: rgba(0,0,0,0.1);
     background: inherit;
     color: white;
   }
+
+.fa {
+  color: white;
+  text-shadow: 1px 1px 1px #000;
+}
 
   </style>
 
@@ -452,7 +489,7 @@
   <div class="contact-container" id="contact-container-id">
     <div class="container">
       <div class="row" id="contact-row">
-        <div class="col-md-12">
+        <div class="col-md-11 col-md-offset-1">
 
           <div id="Contact">
             <h2>Contact</h2>
