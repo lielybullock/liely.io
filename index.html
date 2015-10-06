@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="description" content="Liely Bullock's website">
   <meta name="author" content="Liely Bullock">
-  <meta name="keywords" content="Liely, Bullock, Collective, Qwasi">
+  <meta name="keywords" content="Liely, Bullock, Collective, Qwasi, Solution Sciences">
   <title>Liely Bullock</title>
-
+  <link rel="shortcut icon" href="./images/LB cropped.png">
 
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -31,6 +31,9 @@
   <script src="//code.jquery.com/jquery-1.10.2.js"></script>
   <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
   <link rel="stylesheet" href="/resources/demos/style.css">
+
+
+  <!-- linking dropdown click to accordion -->
   <script>
   $(function() {
     $( "#accordion" ).accordion();
@@ -41,7 +44,8 @@
       var mapNavigationIdToAccordionIndex = {
         collective: 0,
         qwasi: 1,
-        ysc: 2
+        ysc: 2,
+        solutionsciences: 3
       };
 
       $( "#accordion" ).accordion( "option", "active", mapNavigationIdToAccordionIndex[navigationId]);
@@ -55,37 +59,192 @@
 
   <style>
 
+  /*pushing body to just below nav bar*/
+  body { padding-top: 50px; }
+
+
+
+  .navbar-brand { 
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+
+
+  /*navbar colour CSS */
+
+  /* navbar */
+  .navbar-default {
+    background-color: #000000;
+    border-color: #FFFFFF;
+  }
+  /* title */
+  .navbar-default .navbar-brand {
+    color: #777;
+  }
+  .navbar-default .navbar-brand:hover,
+  .navbar-default .navbar-brand:focus {
+    color: #5E5E5E;
+  }
+  /* link */
+  .navbar-default .navbar-nav > li > a {
+    color: #777;
+  }
+  .navbar-default .navbar-nav > li > a:hover,
+  .navbar-default .navbar-nav > li > a:focus {
+    color: #FFFFFF;
+  }
+  .navbar-default .navbar-nav > .active > a, 
+  .navbar-default .navbar-nav > .active > a:hover, 
+  .navbar-default .navbar-nav > .active > a:focus {
+    color: #555;
+    background-color: #E7E7E7;
+  }
+  .navbar-default .navbar-nav > .open > a, 
+  .navbar-default .navbar-nav > .open > a:hover, 
+  .navbar-default .navbar-nav > .open > a:focus {
+    color: #FFFFFF;
+    background-color: #444;
+  }
+  /* caret */
+  .navbar-default .navbar-nav > .dropdown > a .caret {
+    border-top-color: #555;
+    border-bottom-color: #555;
+  }
+  .navbar-default .navbar-nav > .dropdown > a:hover .caret,
+  .navbar-default .navbar-nav > .dropdown > a:focus .caret {
+    border-top-color: #FFFFFF;
+    border-bottom-color: #FFFFFF;
+  }
+  .navbar-default .navbar-nav > .open > a .caret, 
+  .navbar-default .navbar-nav > .open > a:hover .caret, 
+  .navbar-default .navbar-nav > .open > a:focus .caret {
+    border-top-color: #FFFFFF;
+    border-bottom-color: #FFFFFF;
+  }
+  /* mobile version */
+  .navbar-default .navbar-toggle {
+    border-color: #DDD;
+  }
+  .navbar-default .navbar-toggle:hover,
+  .navbar-default .navbar-toggle:focus {
+    background-color: #DDD;
+  }
+  .navbar-default .navbar-toggle .icon-bar {
+    background-color: #CCC;
+  }
+  @media (max-width: 767px) {
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+      color: #777;
+    }
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+      color: #333;
+    }
+  }
+
+  /*end of nav bar colour*/
+
+
 
 
   .heading-container {
+    background: url(./images/logo-background.png);
+    background-size: 100%;
+
+    padding-top: 35px;
+    padding-right: 50px;
+    padding-bottom: 35px;
+    padding-left: 50px;
+  }
+
+
+  .overview-container {
     background: url(./images/earth_lights_lrg.jpg);
+    background-size: 100%;
+
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 150%;
+    line-height: 240%;
+
+    padding-top: 125px;
+    padding-right: 80px;
+    padding-bottom: 125px;
+    padding-left: 80px;
+  }
+
+
+  .experience-container {
+    background: url(./images/london-bigben.jpg);
+    background-size: 100%;
+
+    color: #444;
+
+    padding-top: 125px;
+    padding-right: 80px;
+    padding-bottom: 125px;
+    padding-left: 80px;
   }
 
 
 
 
+  .publications-container {
+    background: url(./images/background-lion.jpg);
+    background-size: 100%;
+
+    color: #FFFFFF;
+    text-align: right;
+    font-size: 100%;
+    line-height: 240%;
+
+    padding-top: 125px;
+    padding-right: 80px;
+    padding-bottom: 125px;
+    padding-left: 80px;
+  }
+
+
+  .contact-container {
+    background: url(./images/city-of-london.jpg);
+    background-size: 100%;
+
+    color: #FFFFFF;
+    text-align: left;
+    font-size: 150%;
+    line-height: 140%;
+
+    padding-top: 125px;
+    padding-right: 80px;
+    padding-bottom: 125px;
+    padding-left: 80px;
+  }
+
+
+
   </style>
 
-
-
 </head>
+
+
+
+
+
+
+
 
 <body>
 
 
 
-
-
-
-
-
-
-
-
-  <nav class="navbar navbar-default"> 
+  <nav class="navbar navbar-default navbar-fixed-top navbar-custom"> 
     <div class="container-fluid"> 
 
       <div class="navbar-header">
+        <a class="navbar-brand" href="file:///Users/lbullock/liely.io/index.html#heading">
+          <img alt="" src="./images/LB-cropped-small.png">
+        </a>
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
@@ -98,7 +257,8 @@
 
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li><a href="file:///Users/lbullock/liely.io/index.html#Heading">Intro</a></li>
+
+          <li><a href="file:///Users/lbullock/liely.io/index.html#overview">Overview</a></li>
 
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Experience<span class="caret"></span></a>
@@ -108,6 +268,8 @@
               <li><a href="file:///Users/lbullock/liely.io/index.html#qwasi-heading" data-navigation-id="qwasi">Qwasi</a></li>
               <li role="separator" class="divider"></li>
               <li><a href="file:///Users/lbullock/liely.io/index.html#ysc-heading" data-navigation-id="ysc">YSC</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="file:///Users/lbullock/liely.io/index.html#solutionsciences-heading" data-navigation-id="solutionsciences">Solution Sciences</a></li>
             </ul>
           </li>
 
@@ -123,7 +285,6 @@
               <li><a href="file:///Users/lbullock/liely.io/index.html#Contact">Twitter</a></li>
             </ul>
           </li>
-
         </ul>
 
 
@@ -137,42 +298,35 @@
 
 
 
-
-
-
   <div class="heading-container">
     <div class="container">
-      <div class="row" id="intro-row">
+      <div class="row" id="heading-row">
         <div class="col-md-12">
 
-          <div id="Heading">
-            <h1>Liely Bullock</h1>
-          </div>
 
-
-          <div id="profile-picture">
-            <img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/1/005/0a0/1cd/23405bf.jpg" alt="Liely Bullock" height="80" width="80">
-          </div>
-
-
-          <div id="Intro">
-            <p></p>
-            <p>
-              Liely's background is in cloud-based, Software-as-a-Service (SaaS) products. Her experience includes major corporate relationship and business management within a variety of companies, with a focus on developing business throughout Europe and the USA. Most recently this includes Collective, a leading ad tech business whose focus spans the breadth of the digital advertising market; from video to creative formats, from data science to programmatic buying.
-            </p>
-            <p> </p>
-            <p> </p>
-            <p> </p>
-            <p> </p>
-            <p> </p>
-            <p> </p>
+          <div id="lielybullock-picture">
+            <img src="./images/liely-bullock-with-logo.png" alt="" class="img-responsive">
           </div>
         </div>
       </div>
-
-
     </div>
   </div>
+
+
+  <div class="overview-container">
+    <div class="container">
+      <div class="row" id="overview-row">
+        <div class="col-md-12">
+          <div id="overview">
+            <p>
+              Liely's background is in cloud-based, Software-as-a-Service (SaaS) products. Her experience includes major corporate relationship and business management within a variety of companies, with a focus on developing business throughout Europe and the USA. Most recently this includes Collective, a leading ad tech business whose focus spans the breadth of the digital advertising market; from video to creative formats, from data science to programmatic buying.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
 
 
@@ -186,45 +340,58 @@
             <h2>Experience</h2>
 
 
+            <div class="custom">
+              <div id="accordion">
 
-            <div id="accordion">
+                <h3 id="collective-heading">Collective</h3>
+                <div>
+                  <p>
+                    Collective is a leading brand solutions, ad tech company that connects brand marketers to audiences with personalised ad experiences across screens and formats. Collective's unified view of the consumer platform breaks down traditional media silos and enables brands to control audience reach and frequency and choreograph messaging across TV, PC, tablet and smartphone devices. 
+                  </p>
+                  <p>
+                    Collective was awarded Best Use of Creativity at The Drum Digital Trading Awards 2015, and Most Improved at Innovation and Most Improved Media Owner at the IPA Media Owner Awards 2014.
+                  </p>
+                  <p>
+                    Responsible for developing Collective’s marketing services business and successful product partnerships with agencies, advertisers, publishers and product companies in order to grow UK and Continental European footprint.
+                  </p>
+                </div>
 
-              <h3 id="collective-heading">Collective</h3>
-              <div>
-                <p>
-                  Collective is a leading brand solutions, ad tech company that connects brand marketers to audiences with personalised ad experiences across screens and formats. Collective's unified view of the consumer platform breaks down traditional media silos and enables brands to control audience reach and frequency and choreograph messaging across TV, PC, tablet and smartphone devices. 
-                </p>
-                <p>
-                  Collective was awarded Best Use of Creativity at The Drum Digital Trading Awards 2015, and Most Improved at Innovation and Most Improved Media Owner at the IPA Media Owner Awards 2014.
-                </p>
-                <p>
-                  Responsible for developing Collective’s marketing services business and successful product partnerships with agencies, advertisers, publishers and product companies in order to grow UK and Continental European footprint.
-                </p>
-              </div>
 
-              
-              <h3 id="qwasi-heading">Qwasi Inc.</h3>
-              <div>
-                <p>
-                  Qwasi is an international, US-based mobile Software-as-a-Service company. Its omni-channel platform enables enterprises to engage with their customers using highly personalised, targeted and event-triggered messaging across multiple channels (including SMS, Social, In-App Push, Email, IM apps and IVR). Qwasi works across multiple sectors with a focus on retail, hospitality, health and financial services.
-                </p>
-                <p>
-                  Recruited following Series A funding for business set up in London, UK, with core business generation with direct client interface and management, including US, UK and Continental European footprint. 
-                </p>
-                <p>
-                  Promoted from Interaction Manager to Engagement Analyst in August 2014.
-                </p>
-              </div>
+                <h3 id="qwasi-heading">Qwasi Inc.</h3>
+                <div>
+                  <p>
+                    Qwasi is an international, US-based mobile Software-as-a-Service company. Its omni-channel platform enables enterprises to engage with their customers using highly personalised, targeted and event-triggered messaging across multiple channels (including SMS, Social, In-App Push, Email, IM apps and IVR). Qwasi works across multiple sectors with a focus on retail, hospitality, health and financial services.
+                  </p>
+                  <p>
+                    Recruited following Series A funding for business set up in London, UK, with core business generation with direct client interface and management, including US, UK and Continental European footprint. 
+                  </p>
+                  <p>
+                    Promoted from Interaction Manager to Engagement Analyst in August 2014.
+                  </p>
+                </div>
 
-              
-              <h3 id="ysc-heading">Young Samuel Chambers (YSC)</h3>
-              <div>
-                <p>
-                  YSC is a global firm of business psychologists working with organisations to achieve commercial success through their people. YSC's work is focused on the assessment and development of talent in order to develop high performing teams, and embed the values and culture necessary to achieve businesses' goals.
-                </p>
-                <p>
-                  Account and project manager for some of YSC's largest clients, including Barclays, Diageo, BT, AstraZeneca and Royal Sun Alliance.
-                </p>
+
+                <h3 id="ysc-heading">Young Samuel Chambers (YSC)</h3>
+                <div>
+                  <p>
+                    YSC is a global firm of business psychologists working with organisations to achieve commercial success through their people. YSC's work is focused on the assessment and development of talent in order to develop high performing teams, and embed the values and culture necessary to achieve businesses' goals.
+                  </p>
+                  <p>
+                    Account and project manager for some of YSC's largest clients, including Barclays, Diageo, BT, AstraZeneca and Royal Sun Alliance.
+                  </p>
+                </div>
+
+                <h3 id="solutionsciences-heading">Solution Sciences Ltd.</h3>
+                <div>
+                  <p>
+                    Solution Sciences Ltd. is the producer of Alibi Pretox Drink, a market-leading health drink which combines vitamins, natural minerals and herbal extracts whilst uniquely excluding all artificial sugars and ingredients.
+                  </p>
+                  <p>
+                    Internship with responsibility for managing and ensuring the growth of major accounts, including Compass Group, Brakes and 3663.
+                  </p>
+                </div>
+
+
               </div>
             </div>
           </div>
@@ -244,15 +411,22 @@
 
           <div id="publications">
             <h2>Publications</h2>
-            <p>
-              Evaluation of factors affecting emotional responses in zoo visitors and the impact of emotion on conservation mindedness. - D. M. Powell & E. V. W. Bullock
-            </p>
-            <p>
-              Anthrozoös, June 2014
-            </p>
-            <p>
-              My research, conducted at the Bronx Zoo, New York, assessed whether the public can be educated effectively on conservation issues in informal settings.
-            </p>
+
+            <div class="col-md-4"></div>
+
+            <div class="col-md-4"></div>
+
+            <div class="col-md-4">
+              <p>
+                'Evaluation of factors affecting emotional responses in zoo visitors and the impact of emotion on conservation mindedness.' - D. M. Powell & E. V. W. Bullock
+              </p>
+              <p>
+                Anthrozoös, June 2014
+              </p>
+              <p>
+                My research, conducted at the Bronx Zoo, New York, assessed whether the public can be educated effectively on conservation issues in informal settings.
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -288,7 +462,7 @@
       </div>
     </div>
   </div>
-  
+
 
 
 
