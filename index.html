@@ -9,6 +9,9 @@
   <link rel="shortcut icon" href="./images/LB cropped.png">
 
 
+  <meta name="viewport" contents="width-device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
@@ -48,6 +51,8 @@
         solutionsciences: 3
       };
 
+      console.log(navigationId);
+
       $( "#accordion" ).accordion( "option", "active", mapNavigationIdToAccordionIndex[navigationId]);
     });
 
@@ -57,10 +62,13 @@
 
 
 
+
+
   <style>
 
   /*pushing body to just below nav bar*/
   body { padding-top: 50px; }
+
 
 
 
@@ -152,7 +160,7 @@
     background: url(./images/logo-background.png);
     background-size: 100%;
 
-    padding-top: 35px;
+    padding-top: 55px;
     padding-right: 50px;
     padding-bottom: 35px;
     padding-left: 50px;
@@ -179,7 +187,7 @@
     background: url(./images/london-bigben.jpg);
     background-size: 100%;
 
-    color: #444;
+    color: #222;
 
     padding-top: 125px;
     padding-right: 80px;
@@ -187,7 +195,10 @@
     padding-left: 80px;
   }
 
-
+  .experience-container h2 {
+    color: #FFFFFF;
+    text-shadow: 1px 1px 1px #000;
+  }
 
 
   .publications-container {
@@ -215,13 +226,18 @@
     font-size: 150%;
     line-height: 140%;
 
-    padding-top: 125px;
+    padding-top: 75px;
     padding-right: 80px;
-    padding-bottom: 125px;
+    padding-bottom: 75px;
     padding-left: 80px;
   }
 
 
+  .ui-accordion-content, .ui-accordion-content p {
+    background-color: rgba(0,0,0,0.1);
+    background: inherit;
+    color: white;
+  }
 
   </style>
 
@@ -237,12 +253,11 @@
 <body>
 
 
-
   <nav class="navbar navbar-default navbar-fixed-top navbar-custom"> 
     <div class="container-fluid"> 
 
       <div class="navbar-header">
-        <a class="navbar-brand" href="file:///Users/lbullock/liely.io/index.html#heading">
+        <a class="navbar-brand" href="file:///Users/lbullock/liely.io/index.html#heading-container-id">
           <img alt="" src="./images/LB-cropped-small.png">
         </a>
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -258,31 +273,31 @@
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
 
-          <li><a href="file:///Users/lbullock/liely.io/index.html#overview">Overview</a></li>
+          <li><a href="file:///Users/lbullock/liely.io/index.html#overview-container-id">Overview</a></li>
 
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Experience<span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li><a href="file:///Users/lbullock/liely.io/index.html#collective-heading" data-navigation-id="collective">Collective</a></li>
+              <li><a href="file:///Users/lbullock/liely.io/index.html#experience-container-id" data-navigation-id="collective">Collective</a></li>
               <li role="separator" class="divider"></li>
-              <li><a href="file:///Users/lbullock/liely.io/index.html#qwasi-heading" data-navigation-id="qwasi">Qwasi</a></li>
+              <li><a href="file:///Users/lbullock/liely.io/index.html#experience-container-id" data-navigation-id="qwasi">Qwasi</a></li>
               <li role="separator" class="divider"></li>
-              <li><a href="file:///Users/lbullock/liely.io/index.html#ysc-heading" data-navigation-id="ysc">YSC</a></li>
+              <li><a href="file:///Users/lbullock/liely.io/index.html#experience-container-id" data-navigation-id="ysc">YSC</a></li>
               <li role="separator" class="divider"></li>
-              <li><a href="file:///Users/lbullock/liely.io/index.html#solutionsciences-heading" data-navigation-id="solutionsciences">Solution Sciences</a></li>
+              <li><a href="file:///Users/lbullock/liely.io/index.html#experience-container-id" data-navigation-id="solutionsciences">Solution Sciences</a></li>
             </ul>
           </li>
 
-          <li><a href="file:///Users/lbullock/liely.io/index.html#publications">Publications</a></li>
+          <li><a href="file:///Users/lbullock/liely.io/index.html#publications-container-id">Publications</a></li>
 
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Contact<span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li><a href="file:///Users/lbullock/liely.io/index.html#Contact">Email</a></li>
+              <li><a href="file:///Users/lbullock/liely.io/index.html#contact-container-id">Email</a></li>
               <li role="separator" class="divider"></li>
-              <li><a href="file:///Users/lbullock/liely.io/index.html#Contact">LinkedIn</a></li>
+              <li><a href="file:///Users/lbullock/liely.io/index.html#contact-container-id">LinkedIn</a></li>
               <li role="separator" class="divider"></li>
-              <li><a href="file:///Users/lbullock/liely.io/index.html#Contact">Twitter</a></li>
+              <li><a href="file:///Users/lbullock/liely.io/index.html#contact-container-id">Twitter</a></li>
             </ul>
           </li>
         </ul>
@@ -298,10 +313,10 @@
 
 
 
-  <div class="heading-container">
+  <div class="heading-container" id="heading-container-id">
     <div class="container">
       <div class="row" id="heading-row">
-        <div class="col-md-12">
+        <div class="col-xs-12">
 
 
           <div id="lielybullock-picture">
@@ -313,10 +328,10 @@
   </div>
 
 
-  <div class="overview-container">
+  <div class="overview-container" id="overview-container-id">
     <div class="container">
       <div class="row" id="overview-row">
-        <div class="col-md-12">
+        <div class="col-xs-12">
           <div id="overview">
             <p>
               Liely's background is in cloud-based, Software-as-a-Service (SaaS) products. Her experience includes major corporate relationship and business management within a variety of companies, with a focus on developing business throughout Europe and the USA. Most recently this includes Collective, a leading ad tech business whose focus spans the breadth of the digital advertising market; from video to creative formats, from data science to programmatic buying.
@@ -330,7 +345,7 @@
 
 
 
-  <div class="experience-container">
+  <div class="experience-container" id="experience-container-id">
     <div class="container">
       <div class="row" id="experience-row">
         <div class="col-md-12">
@@ -404,7 +419,7 @@
 
 
 
-  <div class="publications-container">
+  <div class="publications-container" id="publications-container-id">
     <div class="container">
       <div class="row" id="publications-row">
         <div class="col-md-12">
@@ -412,20 +427,18 @@
           <div id="publications">
             <h2>Publications</h2>
 
-            <div class="col-md-4"></div>
-
-            <div class="col-md-4"></div>
-
-            <div class="col-md-4">
-              <p>
-                'Evaluation of factors affecting emotional responses in zoo visitors and the impact of emotion on conservation mindedness.' - D. M. Powell & E. V. W. Bullock
-              </p>
-              <p>
-                Anthrozoös, June 2014
-              </p>
-              <p>
-                My research, conducted at the Bronx Zoo, New York, assessed whether the public can be educated effectively on conservation issues in informal settings.
-              </p>
+            <div class="row">
+              <div class="col-md-4 col-md-offset-8">
+                <p>
+                  'Evaluation of factors affecting emotional responses in zoo visitors and the impact of emotion on conservation mindedness.' - D. M. Powell & E. V. W. Bullock
+                </p>
+                <p class="kk">
+                  Anthrozoös, June 2014
+                </p>
+                <p>
+                  My research, conducted at the Bronx Zoo, New York, assessed whether the public can be educated effectively on conservation issues in informal settings.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -436,7 +449,7 @@
 
 
 
-  <div class="contact-container">
+  <div class="contact-container" id="contact-container-id">
     <div class="container">
       <div class="row" id="contact-row">
         <div class="col-md-12">
